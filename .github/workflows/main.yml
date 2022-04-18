@@ -11,10 +11,11 @@ on:
 
 jobs:
   test:
-    name: Run unit and e2e tests
+    name: Test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout GitHub Action
+        uses: actions/checkout@v3
 
       - name: Install Dependencies
         run: npm ci
